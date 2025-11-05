@@ -23,7 +23,29 @@ int main() {
     int minute = remainHour / secondsPerMinute;
     int sec = remainHour % secondsPerMinute;
 
-    cout << inputSec << " detik = " << day << " hari, " << hour << " jam, " << minute << " menit, " << sec << " detik.";
+    const int array[5] = {inputSec, day, hour, minute, sec};
+
+    for (int i = 0; i < 5; i++) {
+        switch(i) {
+            case 0:
+                cout << array[i] << " detik = ";
+                break;
+            case 1:
+                cout << array[i] << " hari, ";
+                break;
+            case 2:
+                cout << array[i] << " jam, ";
+                break;
+            case 3:
+                cout << array[i] << " menit, ";
+                break;
+            case 4:
+                cout << array[i] << " detik.";
+                break;
+            default:
+                break;
+        }
+    }
 
     return 0;
 }
