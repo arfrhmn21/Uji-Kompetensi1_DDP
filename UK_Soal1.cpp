@@ -20,8 +20,27 @@ int main() {
     int minute = remain / secondsPerMinute;
     int sec = remain % secondsPerMinute;
 
-    cout << inputSec << " detik = " << hour << " jam, " << minute << " menit, " << sec << " detik.";
-    
+    const int array[4] = {inputSec, hour, minute, sec};
+
+    for (int i = 0; i < 4; i++) {
+        switch(i) {
+            case 0:
+                cout << array[i] << " detik = ";
+                break;
+            case 1:
+                cout << array[i] << " jam, ";
+                break;
+            case 2:
+                cout << array[i] << " menit, ";
+                break;
+            case 3:
+                cout << array[i] << " detik.";
+                break;
+            default:
+                break;
+        }
+    }
+
     return 0;
 }
 
